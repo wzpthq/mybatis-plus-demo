@@ -17,17 +17,17 @@ import java.util.List;
 public class UserMapperTest {
 
     @Autowired
-    UserMapper userMapper;
+    UserDao userDao;
 
     @Test
     public void testSelectList() {
-        List<User> users = userMapper.selectList(null);
+        List<User> users = userDao.selectList(null);
         users.forEach(System.out :: println);
     }
 
     @Test
     public void testSelectById() {
-        System.out.println(userMapper.selectById(1));
+        System.out.println(userDao.selectById(1));
     }
 
 }
